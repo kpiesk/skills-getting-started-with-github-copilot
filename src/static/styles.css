@@ -63,6 +63,8 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(26, 35, 126, 0.08);
+  border-left: 4px solid #1a237e;
 }
 
 .activity-card h4 {
@@ -72,6 +74,132 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8faff 100%);
+  border: 1px solid #d7defa;
+}
+
+.participants-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a237e;
+  letter-spacing: 0.2px;
+}
+
+.participants-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #283593;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: rgba(26, 35, 126, 0.06);
+}
+
+.participant-item:last-child {
+  margin-bottom: 0;
+}
+
+.participant-email {
+  font-size: 14px;
+  color: #1f2a7a;
+  overflow-wrap: anywhere;
+}
+
+.delete-participant-btn {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d8ddff;
+  border-radius: 50%;
+  background: white;
+  color: #c62828;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.delete-participant-btn:hover {
+  background-color: #ffebee;
+  border-color: #ef9a9a;
+  transform: scale(1.05);
+}
+
+.delete-participant-btn:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.delete-icon {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.participants-list .empty-participants {
+  margin-left: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: rgba(26, 35, 126, 0.05);
+  color: #5c6bc0;
+  font-style: italic;
+}
+
+#signup-container {
+  position: relative;
+  border-top: 4px solid #0066cc;
+}
+
+#signup-form {
+  display: grid;
+  gap: 10px;
+}
+
+.signup-hint {
+  font-size: 13px;
+  color: #3446a1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d7defa;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8faff 100%);
+  min-height: 40px;
+}
+
+.signup-hint.warning {
+  color: #8d6e00;
+  border-color: #f6d78b;
+  background: #fff8e1;
+}
+
+.signup-hint.ready {
+  color: #155724;
+  border-color: #a5d6a7;
+  background: #eef8ef;
+}
+
+.signup-hint.error {
+  color: #c62828;
+  border-color: #ef9a9a;
+  background: #ffebee;
 }
 
 .form-group {
@@ -91,6 +219,16 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1a237e;
+  box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.15);
+  outline: none;
 }
 
 button {
@@ -106,6 +244,22 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+#signup-button {
+  margin-top: 2px;
+  min-height: 42px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+#signup-button:disabled {
+  background-color: #9fa8da;
+  cursor: not-allowed;
+}
+
+#signup-button:disabled:hover {
+  background-color: #9fa8da;
 }
 
 .message {

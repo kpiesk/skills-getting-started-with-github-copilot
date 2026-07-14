@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260714-2" />
   </head>
   <body>
     <header>
@@ -26,7 +26,12 @@
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="your-email@mergington.edu"
+            />
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
@@ -35,7 +40,10 @@
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <p id="signup-hint" class="signup-hint" aria-live="polite">
+            Pick an activity to see schedule and open spots.
+          </p>
+          <button id="signup-button" type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>
@@ -45,6 +53,6 @@
       <p>&copy; 2023 Mergington High School</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260714-2"></script>
   </body>
 </html>
